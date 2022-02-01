@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:teste_escribo_2/components/marcadores.dart';
 
 class CardPlayers extends StatelessWidget {
   final String player;
@@ -55,6 +56,7 @@ class CardPlayers extends StatelessWidget {
                     border: Border.all(width: 1, color: Colors.blue),
                     borderRadius: BorderRadius.circular(15),
                   ),
+                  child: MarcadorPosicaoP1(),
                 ),
               ],
             )
@@ -68,6 +70,7 @@ class CardPlayers extends StatelessWidget {
                     border: Border.all(width: 1, color: Colors.red),
                     borderRadius: BorderRadius.circular(15),
                   ),
+                  child: MarcadorPosicaoP2(),
                 ),
                 Container(
                   width: 55,

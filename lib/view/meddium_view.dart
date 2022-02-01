@@ -12,7 +12,7 @@ class MeddiumView extends StatelessWidget {
       margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/snakes_leaders.jpeg'),
+          image: AssetImage('assets/board_image.png'),
         ),
         boxShadow: [
           BoxShadow(

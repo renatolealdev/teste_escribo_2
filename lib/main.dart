@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-
 import 'view/home_page.dart';
+import 'package:provider/provider.dart';
+import './store/snakes_leaders.dart';
 
 main() {
   runApp(
@@ -15,11 +16,16 @@ class MyGameSnakeAndLeaders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Game Snakes and Leaders",
-      home: SafeArea(
-        child: HomePage(),
+    return MultiProvider(
+      providers: [
+        Provider<SnakesLeaders>(create: (_) => SnakesLeaders(),)
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "Game Snakes and Leaders",
+        home: SafeArea(
+          child: HomePage(),
+        ),
       ),
     );
   }
