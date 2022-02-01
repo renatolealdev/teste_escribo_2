@@ -18,7 +18,7 @@ class MyGameSnakeAndLeaders extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<SnakesLeaders>(create: (_) => SnakesLeaders(),)
+        Provider<CobrasEscadas>(create: (_) => CobrasEscadas(),)
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

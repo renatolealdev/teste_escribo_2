@@ -11,7 +11,7 @@ class BoardGame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = Provider.of<SnakesLeaders>(context);
+    final store = Provider.of<CobrasEscadas>(context);
     return GridView.builder(
       reverse: true,
       physics: NeverScrollableScrollPhysics(),

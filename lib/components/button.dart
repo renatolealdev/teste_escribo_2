@@ -11,14 +11,19 @@ class ButtonStart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = Provider.of<SnakesLeaders>(context);
+    final store = Provider.of<CobrasEscadas>(context);
     return Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
         child: Observer(
           builder: (_) => ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
-                primary: store.vezJogador == 1 ? Colors.blue : Colors.red),
-            onPressed: store.jogarDados,
+                primary: (store.vezJogador == 1)
+                    ? Colors.blue
+                    : (store.vezJogador == 2)
+                        ? Colors.red
+                        : Colors.black),
+            onPressed: (store.vezJogador == 1 || store.vezJogador == 2) 
+            ? store.jogar : store.reiniciarJogo,
             icon: Icon(
               Icons.sports_esports_outlined,
               size: 30,
@@ -26,7 +31,9 @@ class ButtonStart extends StatelessWidget {
             label: Padding(
               padding: const EdgeInsets.fromLTRB(2, 5, 2, 5),
               child: Text(
-                "Jogar",
+                (store.vezJogador == 1 || store.vezJogador == 2) 
+                ? "Jogar"
+                : "Reiniciar",
                 style: GoogleFonts.galindo(
                   fontSize: 23,
                 ),

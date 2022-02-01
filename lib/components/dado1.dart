@@ -8,7 +8,7 @@ class Dado1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = Provider.of<SnakesLeaders>(context);
+    final store = Provider.of<CobrasEscadas>(context);
     return Observer(
       builder: (_) => Container(
         margin: EdgeInsets.all(10),
@@ -27,7 +27,7 @@ class Dado1 extends StatelessWidget {
             ),
           ],
         ),
-        child: Image.asset('assets/dado${store.valorDado1.toString()}.png'),
+        child: Image.asset('assets/dado${store.dado1.toString()}.png'),
       ),
     );
   }

@@ -1,11 +1,11 @@
+import 'dart:async';
 import 'package:mobx/mobx.dart';
 import 'dart:math';
-import 'package:teste_escribo_2/view/home_page.dart';
 part 'snakes_leaders.g.dart';
 
-class SnakesLeaders = _SnakesLeaders with _$SnakesLeaders;
+class CobrasEscadas = _CobrasEscadas with _$CobrasEscadas;
 
-abstract class _SnakesLeaders with Store {
+abstract class _CobrasEscadas with Store {
   @observable
   int positionP1 = 0;
 
@@ -13,10 +13,10 @@ abstract class _SnakesLeaders with Store {
   int positionP2 = 0;
 
   @observable
-  int valorDado1 = 1;
+  int dado1 = 1;
 
   @observable
-  int valorDado2 = 6;
+  int dado2 = 6;
 
   @observable
   int vezJogador = 1;
@@ -25,100 +25,211 @@ abstract class _SnakesLeaders with Store {
   int somaDados = 0;
 
   @observable
-  String alertas = "";
+  String alerta1 = "";
+
+  @observable
+  String alerta2 = "";
 
   @action
-  jogarDados() {
-    alertas = "";
-    valorDado1 = Random().nextInt(6) + 1;
-    valorDado2 = Random().nextInt(6) + 1;
-    somaDados = valorDado1 + valorDado2;
+  jogar() {
+    alerta1 = "";
+    alerta2 = "";
+    dado1 = 5; //Random().nextInt(6) + 1;
+    dado2 = 4; //Random().nextInt(6) + 1;
+    somaDados = dado1 + dado2;
     vezJogador == 1 ? condicoesP1() : condicoesP2();
+  }
+
+  reiniciarJogo() {
+    positionP1 = 0;
+    positionP2 = 0;
+    dado1 = 1;
+    dado2 = 6;
+    vezJogador = 1;
+    somaDados = 0;
+    alerta1 = "";
+    alerta2 = "";
+
+    jogar;
   }
 
   condicoesP1() {
     if (positionP1 + somaDados == 9) {
-      alertas = "Escada. Pulou para a casa 28!";
+      alerta1 = "Escada. Pulou para a casa 28!";
       positionP1 = 28;
-      valorDado1 == valorDado2 ? vezJogador = 1 : vezJogador = 2;
+      if (dado1 == dado2) {
+        vezJogador = 1;
+        alerta2 = "Dados iguais. Jogador 1 joga denovo!";
+      } else {
+        vezJogador = 2;
+      }
     } else if (positionP1 + somaDados == 23) {
       positionP1 = 43;
-      valorDado1 == valorDado2 ? vezJogador = 1 : vezJogador = 2;
-      alertas = "Escada. Pulou para a casa 43!";
+      if (dado1 == dado2) {
+        vezJogador = 1;
+        alerta2 = "Dados iguais. Jogador 1 joga denovo!";
+      } else {
+        vezJogador = 2;
+      }
+      alerta1 = "Escada. Pulou para a casa 43!";
     } else if (positionP1 + somaDados == 60) {
       positionP1 = 88;
-      valorDado1 == valorDado2 ? vezJogador = 1 : vezJogador = 2;
-      alertas = "Escada. Pulou para a casa 88!";
+      if (dado1 == dado2) {
+        vezJogador = 1;
+        alerta2 = "Dados iguais. Jogador 1 joga denovo!";
+      } else {
+        vezJogador = 2;
+      }
+      alerta1 = "Escada. Pulou para a casa 88!";
     } else if (positionP1 + somaDados == 61) {
       positionP1 = 83;
-      valorDado1 == valorDado2 ? vezJogador = 1 : vezJogador = 2;
-      alertas = "Escada. Pulou para a casa 83!";
+      if (dado1 == dado2) {
+        vezJogador = 1;
+        alerta2 = "Dados iguais. Jogador 1 joga denovo!";
+      } else {
+        vezJogador = 2;
+      }
+      alerta1 = "Escada. Pulou para a casa 83!";
     } else if (positionP1 + somaDados == 58) {
       positionP1 = 15;
-      valorDado1 == valorDado2 ? vezJogador = 1 : vezJogador = 2;
-      alertas = "Cobra. Retorne para a casa 15!";
+      if (dado1 == dado2) {
+        vezJogador = 1;
+        alerta2 = "Dados iguais. Jogador 1 joga denovo!";
+      } else {
+        vezJogador = 2;
+      }
+      alerta1 = "Cobra. Retorne para a casa 15!";
     } else if (positionP1 + somaDados == 74) {
       positionP1 = 56;
-      valorDado1 == valorDado2 ? vezJogador = 1 : vezJogador = 2;
-      alertas = "Cobra. Retorne para a casa 56!";
+      if (dado1 == dado2) {
+        vezJogador = 1;
+        alerta2 = "Dados iguais. Jogador 1 joga denovo!";
+      } else {
+        vezJogador = 2;
+      }
+      alerta1 = "Cobra. Retorne para a casa 56!";
     } else if (positionP1 + somaDados == 87) {
       positionP1 = 67;
-      valorDado1 == valorDado2 ? vezJogador = 1 : vezJogador = 2;
-      alertas = "Cobra. Retorne para a casa 67!";
+      if (dado1 == dado2) {
+        vezJogador = 1;
+        alerta2 = "Dados iguais. Jogador 1 joga denovo!";
+      } else {
+        vezJogador = 2;
+      }
+      alerta1 = "Cobra. Retorne para a casa 67!";
     } else if (positionP1 + somaDados > 100) {
       int sobra = ((positionP1 + somaDados) - 100);
       positionP1 = 100 - sobra;
-      valorDado1 == valorDado2 ? vezJogador = 1 : vezJogador = 2;
-      alertas = "Bateu no final, volte $sobra casas!";
+      if (dado1 == dado2) {
+        vezJogador = 1;
+        alerta2 = "Dados iguais. Jogador 1 joga denovo!";
+      } else {
+        vezJogador = 2;
+      }
+      alerta1 = "Bateu no final, volte $sobra casas!";
     } else if (positionP1 + somaDados == 100) {
       positionP1 = 100;
-      alertas = "PARABÉNS! O Player-1 venceu!";
+      alerta1 = "Jogador 1 Venceu!";
+      vezJogador = 0;
     } else {
       positionP1 += somaDados;
-      valorDado1 == valorDado2 ? vezJogador = 1 : vezJogador = 2;
+      alerta1 = "Jogador 1 andou $somaDados casas";
+      if (dado1 == dado2) {
+        vezJogador = 1;
+        alerta2 = "Dados iguais. Jogador 1 joga denovo!";
+      } else {
+        vezJogador = 2;
+      }
     }
   }
 
   condicoesP2() {
     if (positionP2 + somaDados == 9) {
-      alertas = "Escada. Pulou para a casa 28!";
+      alerta1 = "Escada. Pulou para a casa 28!";
       positionP2 = 28;
-      valorDado1 == valorDado2 ? vezJogador = 2 : vezJogador = 1;
+      if (dado1 == dado2) {
+        vezJogador = 2;
+        alerta2 = "Dados iguais. Jogador 2 joga denovo!";
+      } else {
+        vezJogador = 1;
+      }
     } else if (positionP2 + somaDados == 23) {
       positionP2 = 43;
-      valorDado1 == valorDado2 ? vezJogador = 2 : vezJogador = 1;
-      alertas = "Escada. Pulou para a casa 43!";
+      if (dado1 == dado2) {
+        vezJogador = 2;
+        alerta2 = "Dados iguais. Jogador 2 joga denovo!";
+      } else {
+        vezJogador = 1;
+      }
+      alerta1 = "Escada. Pulou para a casa 43!";
     } else if (positionP2 + somaDados == 60) {
       positionP2 = 88;
-      valorDado1 == valorDado2 ? vezJogador = 2 : vezJogador = 1;
-      alertas = "Escada. Pulou para a casa 88!";
+      if (dado1 == dado2) {
+        vezJogador = 2;
+        alerta2 = "Dados iguais. Jogador 2 joga denovo!";
+      } else {
+        vezJogador = 1;
+      }
+      alerta1 = "Escada. Pulou para a casa 88!";
     } else if (positionP2 + somaDados == 61) {
       positionP2 = 83;
-      valorDado1 == valorDado2 ? vezJogador = 2 : vezJogador = 1;
-      alertas = "Escada. Pulou para a casa 83!";
+      if (dado1 == dado2) {
+        vezJogador = 2;
+        alerta2 = "Dados iguais. Jogador 2 joga denovo!";
+      } else {
+        vezJogador = 1;
+      }
+      alerta1 = "Escada. Pulou para a casa 83!";
     } else if (positionP2 + somaDados == 58) {
       positionP2 = 15;
-      valorDado1 == valorDado2 ? vezJogador = 2 : vezJogador = 1;
-      alertas = "Cobra. Retorne para a casa 15!";
+      if (dado1 == dado2) {
+        vezJogador = 2;
+        alerta2 = "Dados iguais. Jogador 2 joga denovo!";
+      } else {
+        vezJogador = 1;
+      }
+      alerta1 = "Cobra. Retorne para a casa 15!";
     } else if (positionP2 + somaDados == 74) {
       positionP2 = 56;
-      valorDado1 == valorDado2 ? vezJogador = 2 : vezJogador = 1;
-      alertas = "Cobra. Retorne para a casa 56!";
+      if (dado1 == dado2) {
+        vezJogador = 2;
+        alerta2 = "Dados iguais. Jogador 2 joga denovo!";
+      } else {
+        vezJogador = 1;
+      }
+      alerta1 = "Cobra. Retorne para a casa 56!";
     } else if (positionP2 + somaDados == 87) {
       positionP2 = 67;
-      valorDado1 == valorDado2 ? vezJogador = 2 : vezJogador = 1;
-      alertas = "Cobra. Retorne para a casa 67!";
+      if (dado1 == dado2) {
+        vezJogador = 2;
+        alerta2 = "Dados iguais. Jogador 2 joga denovo!";
+      } else {
+        vezJogador = 1;
+      }
+      alerta1 = "Cobra. Retorne para a casa 67!";
     } else if (positionP2 + somaDados > 100) {
       int sobra = ((positionP2 + somaDados) - 100);
       positionP2 = 100 - sobra;
-      valorDado1 == valorDado2 ? vezJogador = 2 : vezJogador = 1;
-      alertas = "Bateu no final, volte $sobra casas!";
+      if (dado1 == dado2) {
+        vezJogador = 2;
+        alerta2 = "Dados iguais. Jogador 2 joga denovo!";
+      } else {
+        vezJogador = 1;
+      }
+      alerta1 = "Bateu no final, volte $sobra casas!";
     } else if (positionP2 + somaDados == 100) {
       positionP2 = 100;
-      alertas = "PARABÉNS! O Player-2 venceu!";
+      alerta1 = "Jogador 2 Venceu!";
+      vezJogador = 0;
     } else {
       positionP2 += somaDados;
-      valorDado1 == valorDado2 ? vezJogador = 2 : vezJogador = 1;
+      alerta1 = "Jogador 2 andou $somaDados casas";
+      if (dado1 == dado2) {
+        vezJogador = 2;
+        alerta2 = "Dados iguais. Jogador 2 joga denovo!";
+      } else {
+        vezJogador = 1;
+      }
     }
   }
 }

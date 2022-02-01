@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'top_view.dart';
-import 'meddium_view.dart';
-import 'bottom_view.dart';
+import 'screens/top_view.dart';
+import 'screens/meddium_view.dart';
+import 'screens/bottom_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

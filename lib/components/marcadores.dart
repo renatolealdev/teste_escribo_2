@@ -8,7 +8,7 @@ class MarcadorPosicaoP1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = Provider.of<SnakesLeaders>(context);
+    final store = Provider.of<CobrasEscadas>(context);
     return Observer(
       builder: (_) => Center(
         child: Text(store.positionP1.toString()),
@@ -22,7 +22,7 @@ class MarcadorPosicaoP2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = Provider.of<SnakesLeaders>(context);
+    final store = Provider.of<CobrasEscadas>(context);
     return Center(
       child: Observer(
         builder: (_) => Text(store.positionP2.toString()),

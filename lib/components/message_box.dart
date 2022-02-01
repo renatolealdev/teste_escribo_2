@@ -11,7 +11,7 @@ class MessageBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = Provider.of<SnakesLeaders>(context);
+    final store = Provider.of<CobrasEscadas>(context);
     return Observer(
       builder: (_) => Container(
         padding: EdgeInsets.all(5),
@@ -33,34 +33,33 @@ class MessageBox extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Text(
-            //   store.vezJogador == 1
-            //       ? "Player-1 vai jogar..."
-            //       : "Player-2 vai jogar...",
-            //   textAlign: TextAlign.center,
-            //   style: GoogleFonts.oxygen(
-            //     fontSize: 13,
-            //     fontWeight: FontWeight.w600,
-            //   ),
-            // ),
-            Text(
-              store.alertas == "" ? "- - -" : store.alertas,
-              textAlign: TextAlign.center,
-              style: GoogleFonts.oxygen(
-                fontSize: 13,
-                fontWeight: FontWeight.w300,
-                color: Colors.red[800],
-              ),
-            ),
             Text(
               store.somaDados == 0
-                  ? "O jogador 1 começa"
-                  : "A soma dos dados é: ${store.somaDados}",
+                  ? "O jogador 1 começa o jogo"
+                  : "A soma dos dados foi:  ${store.somaDados}",
               textAlign: TextAlign.center,
               style: GoogleFonts.oxygen(
                 fontSize: 13,
                 fontWeight: FontWeight.w300,
                 color: Colors.deepPurple[800],
+              ),
+            ),
+            Text(
+              store.alerta1 == "" ? " " : store.alerta1,
+              textAlign: TextAlign.center,
+              style: GoogleFonts.oxygen(
+                fontSize: 11,
+                fontWeight: FontWeight.w300,
+                color: Colors.red[800],
+              ),
+            ),
+            Text(
+              store.alerta2 == "" ? " " : store.alerta2,
+              textAlign: TextAlign.center,
+              style: GoogleFonts.oxygen(
+                fontSize: 11,
+                fontWeight: FontWeight.w300,
+                color: Colors.red[800],
               ),
             ),
           ],

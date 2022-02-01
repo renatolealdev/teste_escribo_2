@@ -8,8 +8,8 @@ part of 'snakes_leaders.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$SnakesLeaders on _SnakesLeaders, Store {
-  final _$positionP1Atom = Atom(name: '_SnakesLeaders.positionP1');
+mixin _$CobrasEscadas on _CobrasEscadas, Store {
+  final _$positionP1Atom = Atom(name: '_CobrasEscadas.positionP1');
 
   @override
   int get positionP1 {
@@ -24,7 +24,7 @@ mixin _$SnakesLeaders on _SnakesLeaders, Store {
     });
   }
 
-  final _$positionP2Atom = Atom(name: '_SnakesLeaders.positionP2');
+  final _$positionP2Atom = Atom(name: '_CobrasEscadas.positionP2');
 
   @override
   int get positionP2 {
@@ -39,37 +39,37 @@ mixin _$SnakesLeaders on _SnakesLeaders, Store {
     });
   }
 
-  final _$valorDado1Atom = Atom(name: '_SnakesLeaders.valorDado1');
+  final _$dado1Atom = Atom(name: '_CobrasEscadas.dado1');
 
   @override
-  int get valorDado1 {
-    _$valorDado1Atom.reportRead();
-    return super.valorDado1;
+  int get dado1 {
+    _$dado1Atom.reportRead();
+    return super.dado1;
   }
 
   @override
-  set valorDado1(int value) {
-    _$valorDado1Atom.reportWrite(value, super.valorDado1, () {
-      super.valorDado1 = value;
+  set dado1(int value) {
+    _$dado1Atom.reportWrite(value, super.dado1, () {
+      super.dado1 = value;
     });
   }
 
-  final _$valorDado2Atom = Atom(name: '_SnakesLeaders.valorDado2');
+  final _$dado2Atom = Atom(name: '_CobrasEscadas.dado2');
 
   @override
-  int get valorDado2 {
-    _$valorDado2Atom.reportRead();
-    return super.valorDado2;
+  int get dado2 {
+    _$dado2Atom.reportRead();
+    return super.dado2;
   }
 
   @override
-  set valorDado2(int value) {
-    _$valorDado2Atom.reportWrite(value, super.valorDado2, () {
-      super.valorDado2 = value;
+  set dado2(int value) {
+    _$dado2Atom.reportWrite(value, super.dado2, () {
+      super.dado2 = value;
     });
   }
 
-  final _$vezJogadorAtom = Atom(name: '_SnakesLeaders.vezJogador');
+  final _$vezJogadorAtom = Atom(name: '_CobrasEscadas.vezJogador');
 
   @override
   int get vezJogador {
@@ -84,7 +84,7 @@ mixin _$SnakesLeaders on _SnakesLeaders, Store {
     });
   }
 
-  final _$somaDadosAtom = Atom(name: '_SnakesLeaders.somaDados');
+  final _$somaDadosAtom = Atom(name: '_CobrasEscadas.somaDados');
 
   @override
   int get somaDados {
@@ -99,32 +99,47 @@ mixin _$SnakesLeaders on _SnakesLeaders, Store {
     });
   }
 
-  final _$alertasAtom = Atom(name: '_SnakesLeaders.alertas');
+  final _$alerta1Atom = Atom(name: '_CobrasEscadas.alerta1');
 
   @override
-  String get alertas {
-    _$alertasAtom.reportRead();
-    return super.alertas;
+  String get alerta1 {
+    _$alerta1Atom.reportRead();
+    return super.alerta1;
   }
 
   @override
-  set alertas(String value) {
-    _$alertasAtom.reportWrite(value, super.alertas, () {
-      super.alertas = value;
+  set alerta1(String value) {
+    _$alerta1Atom.reportWrite(value, super.alerta1, () {
+      super.alerta1 = value;
     });
   }
 
-  final _$_SnakesLeadersActionController =
-      ActionController(name: '_SnakesLeaders');
+  final _$alerta2Atom = Atom(name: '_CobrasEscadas.alerta2');
 
   @override
-  dynamic jogarDados() {
-    final _$actionInfo = _$_SnakesLeadersActionController.startAction(
-        name: '_SnakesLeaders.jogarDados');
+  String get alerta2 {
+    _$alerta2Atom.reportRead();
+    return super.alerta2;
+  }
+
+  @override
+  set alerta2(String value) {
+    _$alerta2Atom.reportWrite(value, super.alerta2, () {
+      super.alerta2 = value;
+    });
+  }
+
+  final _$_CobrasEscadasActionController =
+      ActionController(name: '_CobrasEscadas');
+
+  @override
+  dynamic jogar() {
+    final _$actionInfo = _$_CobrasEscadasActionController.startAction(
+        name: '_CobrasEscadas.jogar');
     try {
-      return super.jogarDados();
+      return super.jogar();
     } finally {
-      _$_SnakesLeadersActionController.endAction(_$actionInfo);
+      _$_CobrasEscadasActionController.endAction(_$actionInfo);
     }
   }
 
@@ -133,11 +148,12 @@ mixin _$SnakesLeaders on _SnakesLeaders, Store {
     return '''
 positionP1: ${positionP1},
 positionP2: ${positionP2},
-valorDado1: ${valorDado1},
-valorDado2: ${valorDado2},
+dado1: ${dado1},
+dado2: ${dado2},
 vezJogador: ${vezJogador},
 somaDados: ${somaDados},
-alertas: ${alertas}
+alerta1: ${alerta1},
+alerta2: ${alerta2}
     ''';
   }
 }
