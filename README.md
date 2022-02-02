@@ -1,5 +1,5 @@
 ## Como testar esse projeto:
-### 1º Baixar e instalando apk no seu Smartphone Android através desse link: https://drive.google.com/file/d/1x8xEqKaqcH4weWQfyOeD-gyO9cPxWGvb/view?usp=sharing
+### 1º Baixar e instalar o apk no seu Smartphone Android através desse link: https://drive.google.com/file/d/1x8xEqKaqcH4weWQfyOeD-gyO9cPxWGvb/view?usp=sharing
 ### 2º Através do Firebase Hosting (App Web), através desse link direto (Pode abrir em qualquer dispositivo - Obs: SE ABRIR NA WEB, REDUZIR O TAMANHO DA JANELA PARA SIMULAR ESTAR EM UM SMARTPHONE): https://teste2-escribo-jogo.web.app/#/
 
 ### Obs: 
