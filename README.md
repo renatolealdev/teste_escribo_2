@@ -4,16 +4,28 @@
 
 
 ### Jogo completo em execução:
+https://user-images.githubusercontent.com/88440878/152227259-93bedb86-d83c-488a-ad13-6f12519a3edb.mov
+
 
 ### Efeito dos cards ao selecionar vez do jogador:
+https://user-images.githubusercontent.com/88440878/152227294-c190cdf4-6307-4926-867a-80a8fb6a6690.mov
+
 
 ### Efeito do botão jogar (a cor corresponde com a cor de cada jogador, indicando de quem é a vez de tocar no botão):
+https://user-images.githubusercontent.com/88440878/152227311-03a4c687-5f2e-4197-ad3a-88727d9bd2b0.mov
+
 
 ### Efeito no gradiente do fundo da tela (A cor do jogador vencedor assume o gradiente do fundo, indicando que foi o vencedor):
+![P1_vence](https://user-images.githubusercontent.com/88440878/152227759-0513a9b3-521e-4a7d-a3a5-5fbe147bc4c1.png)
+![P2_vence](https://user-images.githubusercontent.com/88440878/152227768-4fb72e49-56bd-45b9-901e-ba159ea20f20.png)
 
 ### Troca dos indicadores dos dados a cada jogado e Caixa de mensagens informativas:
+https://user-images.githubusercontent.com/88440878/152227839-3a0b4d15-378d-497a-9181-8c9706079d91.mov
+
 
 ### Posicionamento dos avatares indicativos de posição a cada avanço ou retrocesso das casas:
+https://user-images.githubusercontent.com/88440878/152227864-df502ab0-ee8e-468f-8ba8-1db87aa90a85.mov
+
 
 
 ##### resumo: Este projeto é sobre um teste para o desenvolvimento de um jogo, mais especificamente, o jogo indiano: Cobras e Escadas. Nele haviam as seguintes exigências:
