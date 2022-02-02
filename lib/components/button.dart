@@ -1,10 +1,12 @@
-// ignore_for_file: prefer_const_constructors, must_be_immutable
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../store/snakes_leaders.dart';
+
+// Este é o Widget do botão Jogar do Jogo - Onde é chamado o método jogar que está no arquivo de gerenciamento de estado (store)...
 
 class ButtonStart extends StatelessWidget {
   ButtonStart({Key? key}) : super(key: key);

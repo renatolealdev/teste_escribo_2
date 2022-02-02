@@ -1,7 +1,9 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:teste_escribo_2/components/board.dart';
+
+// Esta é a Screen Meddium, onde ficam o Board(tabuleiro) do App e também os marcadores de posição dos Jogadores...
 
 class MeddiumView extends StatelessWidget {
   const MeddiumView({Key? key}) : super(key: key);
@@ -14,20 +16,7 @@ class MeddiumView extends StatelessWidget {
         image: DecorationImage(
           image: AssetImage('assets/board_image.png'),
         ),
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: Colors.lightGreen.shade400,
-        //     offset: Offset(4, 4),
-        //     blurRadius: 8,
-        //     spreadRadius: 1,
-        //   ),
-        //   BoxShadow(
-        //     color: Colors.yellow.shade100,
-        //     offset: Offset(-5, -5),
-        //     blurRadius: 8,
-        //     spreadRadius: 1,
-        //   ),
-        // ],
+
       ),
       width: 340,
       height: 340,

@@ -1,7 +1,11 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 import '../store/snakes_leaders.dart';
+
+// Estes são os Widgets responsáveis por mostrar a casa correspondente ao Jogador (em tempo real)...
 
 class MarcadorPosicaoP1 extends StatelessWidget {
   const MarcadorPosicaoP1({Key? key}) : super(key: key);

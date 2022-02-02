@@ -3,6 +3,8 @@ import 'package:mobx/mobx.dart';
 import 'dart:math';
 part 'snakes_leaders.g.dart';
 
+// Este é o arquivo Store para o gerenciamento de estado do App, através do MobX + Provider...
+
 class CobrasEscadas = _CobrasEscadas with _$CobrasEscadas;
 
 abstract class _CobrasEscadas with Store {

@@ -1,10 +1,12 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../store/snakes_leaders.dart';
+
+// Este é o Widget Board(tabuleiro) do Jogo...
 
 class BoardGame extends StatelessWidget {
   const BoardGame({Key? key}) : super(key: key);

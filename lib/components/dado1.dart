@@ -1,7 +1,12 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 import '../store/snakes_leaders.dart';
+
+// Este é o Widget referente ao dado1. * O valor que for sorteado na Store (através de númeração ramdômica) 
+// será utilizado para referenciar qual png deve aparecer dentro do Container que representa o dado...
 
 class Dado1 extends StatelessWidget {
   const Dado1({Key? key}) : super(key: key);
@@ -17,16 +22,9 @@ class Dado1 extends StatelessWidget {
         height: 50,
         decoration: BoxDecoration(
           color: Colors.white,
-          // border: Border.all(width: 0.3),
+
           borderRadius: BorderRadius.circular(8),
-          // boxShadow: [
-          //   BoxShadow(
-          //     color: Colors.grey.shade500,
-          //     offset: Offset(4, 4),
-          //     blurRadius: 5,
-          //     spreadRadius: 1,
-          //   ),
-          // ],
+
         ),
         child: Image.asset('assets/dado${store.dado1.toString()}.png'),
       ),
