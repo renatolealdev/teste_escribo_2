@@ -11,21 +11,22 @@ class Dado1 extends StatelessWidget {
     final store = Provider.of<CobrasEscadas>(context);
     return Observer(
       builder: (_) => Container(
+        padding: EdgeInsets.all(4),
         margin: EdgeInsets.all(10),
         width: 50,
         height: 50,
         decoration: BoxDecoration(
           color: Colors.white,
-          border: Border.all(width: 0.3),
+          // border: Border.all(width: 0.3),
           borderRadius: BorderRadius.circular(8),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.shade500,
-              offset: Offset(4, 4),
-              blurRadius: 5,
-              spreadRadius: 1,
-            ),
-          ],
+          // boxShadow: [
+          //   BoxShadow(
+          //     color: Colors.grey.shade500,
+          //     offset: Offset(4, 4),
+          //     blurRadius: 5,
+          //     spreadRadius: 1,
+          //   ),
+          // ],
         ),
         child: Image.asset('assets/dado${store.dado1.toString()}.png'),
       ),

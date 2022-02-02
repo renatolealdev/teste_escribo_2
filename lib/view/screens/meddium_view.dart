@@ -14,14 +14,20 @@ class MeddiumView extends StatelessWidget {
         image: DecorationImage(
           image: AssetImage('assets/board_image.png'),
         ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade500,
-            offset: Offset(4, 4),
-            blurRadius: 6,
-            spreadRadius: 1,
-          ),
-        ],
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: Colors.lightGreen.shade400,
+        //     offset: Offset(4, 4),
+        //     blurRadius: 8,
+        //     spreadRadius: 1,
+        //   ),
+        //   BoxShadow(
+        //     color: Colors.yellow.shade100,
+        //     offset: Offset(-5, -5),
+        //     blurRadius: 8,
+        //     spreadRadius: 1,
+        //   ),
+        // ],
       ),
       width: 340,
       height: 340,

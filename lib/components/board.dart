@@ -34,7 +34,7 @@ class BoardGame extends StatelessWidget {
                       borderRadius: BorderRadius.circular(25),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black87,
+                          color: Colors.black54,
                           offset: Offset(2, 2),
                           blurRadius: 5,
                           spreadRadius: 2,
@@ -58,7 +58,7 @@ class BoardGame extends StatelessWidget {
                       borderRadius: BorderRadius.circular(25),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black87,
+                          color: Colors.black54,
                           offset: Offset(2, 2),
                           blurRadius: 5,
                           spreadRadius: 2,

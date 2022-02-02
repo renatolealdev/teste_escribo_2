@@ -144,6 +144,39 @@ mixin _$CobrasEscadas on _CobrasEscadas, Store {
   }
 
   @override
+  dynamic reiniciarJogo() {
+    final _$actionInfo = _$_CobrasEscadasActionController.startAction(
+        name: '_CobrasEscadas.reiniciarJogo');
+    try {
+      return super.reiniciarJogo();
+    } finally {
+      _$_CobrasEscadasActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic condicoesP1() {
+    final _$actionInfo = _$_CobrasEscadasActionController.startAction(
+        name: '_CobrasEscadas.condicoesP1');
+    try {
+      return super.condicoesP1();
+    } finally {
+      _$_CobrasEscadasActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic condicoesP2() {
+    final _$actionInfo = _$_CobrasEscadasActionController.startAction(
+        name: '_CobrasEscadas.condicoesP2');
+    try {
+      return super.condicoesP2();
+    } finally {
+      _$_CobrasEscadasActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 positionP1: ${positionP1},

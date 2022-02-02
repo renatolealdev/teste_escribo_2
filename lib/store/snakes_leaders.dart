@@ -1,4 +1,4 @@
-import 'dart:async';
+
 import 'package:mobx/mobx.dart';
 import 'dart:math';
 part 'snakes_leaders.g.dart';
@@ -6,6 +6,7 @@ part 'snakes_leaders.g.dart';
 class CobrasEscadas = _CobrasEscadas with _$CobrasEscadas;
 
 abstract class _CobrasEscadas with Store {
+  
   @observable
   int positionP1 = 0;
 
@@ -34,12 +35,13 @@ abstract class _CobrasEscadas with Store {
   jogar() {
     alerta1 = "";
     alerta2 = "";
-    dado1 = 5; //Random().nextInt(6) + 1;
-    dado2 = 4; //Random().nextInt(6) + 1;
+    dado1 = Random().nextInt(6) + 1;
+    dado2 = Random().nextInt(6) + 1;
     somaDados = dado1 + dado2;
     vezJogador == 1 ? condicoesP1() : condicoesP2();
   }
 
+  @action
   reiniciarJogo() {
     positionP1 = 0;
     positionP2 = 0;
@@ -53,6 +55,7 @@ abstract class _CobrasEscadas with Store {
     jogar;
   }
 
+  @action
   condicoesP1() {
     if (positionP1 + somaDados == 9) {
       alerta1 = "Escada. Pulou para a casa 28!";
@@ -143,6 +146,7 @@ abstract class _CobrasEscadas with Store {
     }
   }
 
+  @action
   condicoesP2() {
     if (positionP2 + somaDados == 9) {
       alerta1 = "Escada. Pulou para a casa 28!";

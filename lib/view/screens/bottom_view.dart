@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:teste_escribo_2/components/button.dart';
 import 'package:teste_escribo_2/components/dado1.dart';
 import 'package:teste_escribo_2/components/dado2.dart';

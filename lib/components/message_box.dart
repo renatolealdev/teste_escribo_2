@@ -15,20 +15,11 @@ class MessageBox extends StatelessWidget {
     return Observer(
       builder: (_) => Container(
         padding: EdgeInsets.all(5),
-        margin: EdgeInsets.fromLTRB(5, 3, 5, 10),
+        margin: EdgeInsets.fromLTRB(5, 3, 5, 5),
         width: 200,
         height: 70,
         decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(width: 0.5),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.shade500,
-              offset: Offset(3, 3),
-              blurRadius: 7,
-              spreadRadius: 1,
-            ),
-          ],
+          color: Colors.yellow[100],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -41,7 +32,7 @@ class MessageBox extends StatelessWidget {
               style: GoogleFonts.oxygen(
                 fontSize: 13,
                 fontWeight: FontWeight.w300,
-                color: Colors.deepPurple[800],
+                color: Colors.black87,
               ),
             ),
             Text(
@@ -50,7 +41,7 @@ class MessageBox extends StatelessWidget {
               style: GoogleFonts.oxygen(
                 fontSize: 11,
                 fontWeight: FontWeight.w300,
-                color: Colors.red[800],
+                color: Colors.green[800],
               ),
             ),
             Text(
@@ -59,7 +50,7 @@ class MessageBox extends StatelessWidget {
               style: GoogleFonts.oxygen(
                 fontSize: 11,
                 fontWeight: FontWeight.w300,
-                color: Colors.red[800],
+                color: Colors.blue[600],
               ),
             ),
           ],
