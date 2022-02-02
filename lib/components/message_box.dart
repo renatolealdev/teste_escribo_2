@@ -17,7 +17,7 @@ class MessageBox extends StatelessWidget {
         padding: EdgeInsets.all(5),
         margin: EdgeInsets.fromLTRB(5, 3, 5, 5),
         width: 200,
-        height: 70,
+        height: 100,
         decoration: BoxDecoration(
           color: Colors.yellow[100],
         ),
@@ -30,7 +30,7 @@ class MessageBox extends StatelessWidget {
                   : "A soma dos dados foi:  ${store.somaDados}",
               textAlign: TextAlign.center,
               style: GoogleFonts.oxygen(
-                fontSize: 13,
+                fontSize: 10,
                 fontWeight: FontWeight.w300,
                 color: Colors.black87,
               ),
@@ -39,7 +39,7 @@ class MessageBox extends StatelessWidget {
               store.alerta1 == "" ? " " : store.alerta1,
               textAlign: TextAlign.center,
               style: GoogleFonts.oxygen(
-                fontSize: 11,
+                fontSize: 10,
                 fontWeight: FontWeight.w300,
                 color: Colors.green[800],
               ),
@@ -48,7 +48,7 @@ class MessageBox extends StatelessWidget {
               store.alerta2 == "" ? " " : store.alerta2,
               textAlign: TextAlign.center,
               style: GoogleFonts.oxygen(
-                fontSize: 11,
+                fontSize: 10,
                 fontWeight: FontWeight.w300,
                 color: Colors.blue[600],
               ),

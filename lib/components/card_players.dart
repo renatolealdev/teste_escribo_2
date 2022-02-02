@@ -47,7 +47,7 @@ class CardPlayers extends StatelessWidget {
                         child: Text(
                           "P1",
                           style: GoogleFonts.galindo(
-                            fontSize: 25,
+                            fontSize: 22,
                           ),
                         ),
                       ),
@@ -95,7 +95,7 @@ class CardPlayers extends StatelessWidget {
                         child: Text(
                           "P2",
                           style: GoogleFonts.galindo(
-                            fontSize: 25,
+                            fontSize: 22,
                           ),
                         ),
                       ),

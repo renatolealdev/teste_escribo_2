@@ -95,7 +95,7 @@ class BoardGame extends StatelessWidget {
                         "P1/2",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.galindo(
-                          fontSize: 10,
+                          fontSize: 8,
                           color: Colors.white,
                         ),
                       ),
