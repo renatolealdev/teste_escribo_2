@@ -2,6 +2,11 @@
 ### 1º Baixar e instalando apk no seu Smartphone Android através desse link: https://drive.google.com/file/d/1x8xEqKaqcH4weWQfyOeD-gyO9cPxWGvb/view?usp=sharing
 ### 2º Através do Firebase Hosting (App Web), através desse link direto (Pode abrir em qualquer dispositivo - Obs: SE ABRIR NA WEB, REDUZIR O TAMANHO DA JANELA PARA SIMULAR ESTAR EM UM SMARTPHONE): https://teste2-escribo-jogo.web.app/#/
 
+### Obs: 
+#### - Todo o gerenciamento de estado do jogo foi feito com MobX + Provider!
+#### - Desenhei todo o board(tabuleiro), pois não encontrei um compatível gratuitamente na internet!
+#### - Alguns efeitos de animação e transição de cores foram feitos para dar mais dinamismo no jogo!
+
 ### Jogo completo em execução:
 https://user-images.githubusercontent.com/88440878/152227259-93bedb86-d83c-488a-ad13-6f12519a3edb.mov
 
