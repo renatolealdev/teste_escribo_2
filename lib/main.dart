@@ -18,12 +18,15 @@ class MyGameSnakeAndLeaders extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<CobrasEscadas>(create: (_) => CobrasEscadas(),)
+        Provider<CobrasEscadas>(
+          create: (_) => CobrasEscadas(),
+        )
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "Game Snakes and Leaders",
-        home: SafeArea( // Reduz a área do App para área útil somente...
+        home: SafeArea(
+          // Reduz a área do App para área útil somente...
           child: HomePage(), // Chama a Home Page do App...
         ),
       ),

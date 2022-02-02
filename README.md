@@ -1,8 +1,10 @@
-# Jogo Cobras e Escadas
+# teste_escribo_2
 
-#### Olá! Gostaria de explicar um pouco sobre este projeto. Vou iniciar com vídeos e prints do projeto em execução...
+A new Flutter project.
 
+## Getting Started
 
+<<<<<<< HEAD
 ### Jogo completo em execução:
 https://user-images.githubusercontent.com/88440878/152227259-93bedb86-d83c-488a-ad13-6f12519a3edb.mov
 
@@ -53,3 +55,15 @@ Essa são as regras do Jogo:
 6. Caso um jogador pare em uma casa em que está localizada a cabeça de uma cobra, ele vai obrigatoriamente deve descer até o casa onde está a ponta da cauda da cobra. 
 7. Um jogador deve cair exatamente na última casa (100) para vencer o jogo. O primeiro jogador a fazer isso, vence. Mas se o somatório dos dados com a casa atual for maior que 100, o jogador deve se movimentar para trás até a contagem terminar, como se ele tivesse batido em uma parede e retornasse. Exemplo, se um jogador está na casa 98 e o somatório dos dados dá 5, o jogador deve se mover até a casa 100 (dois movimentos), e fazer o retorno, caminhando para 99, 98 e 97 (três, quatro e cinco movimentos.)
 8. Se um jogador tirar dados iguais e chegar exatamente na casa 100 sem movimentos restantes, então o jogador vence o jogo e não precisa jogar novamente. Exemplo, se um jogador está na casa 98 e o somatório dos dados dá 2 (1+1), ele ganha a segunda jogada. Mas como o primeiro movimento o faz ficar na casa 100, ele vence o jogo e não precisa jogar novamente. 
+=======
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+>>>>>>> parent of 4b362fd (Update README.md)
